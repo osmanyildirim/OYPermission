@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version                   = "1.0"
   s.summary                   = "Swift SDK to help with Permission authorizations"
 
-  s.homepage                  = "github.com/osmanyildirim"
+  s.homepage                  = "https://github.com/osmanyildirim/OYPermission.git"
   s.license                   = { :type => "MIT", :file => "LICENSE" }
   s.author                    = { "osmanyildirim" => "github.com/osmanyildirim" }
 
