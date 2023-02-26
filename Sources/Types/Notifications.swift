@@ -56,8 +56,14 @@ public final class Notifications: OYBaseRequestable {
 
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.badge, .alert, .sound]) { granted, error in
+            guard granted else {
+                closure?(false, error)
+                return
+            }
+
             DispatchQueue.main.async {
-                closure?(granted, error)
+                UIApplication.shared.registerForRemoteNotifications()
+                closure?(granted, nil)
             }
         }
     }
